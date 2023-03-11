@@ -67,7 +67,7 @@ class NotesNiewModel @Inject constructor(
                     recentlyDeletedNote = null
                 }
             }
-            is NotesEvent.ToogleOrderSection -> {
+            is NotesEvent.ToggleOrderSection -> {
                 _state.value = state.value.copy(
                     isOrderSectionVisible = !state.value.isOrderSectionVisible
                 )

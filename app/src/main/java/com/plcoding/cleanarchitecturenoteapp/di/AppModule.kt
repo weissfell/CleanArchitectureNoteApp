@@ -9,6 +9,7 @@ import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.AddNot
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.DeleteNote
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.GetAllNotes
 import com.plcoding.cleanarchitecturenoteapp.feature_note.domain.use_case.NoteUseCases
+import com.plcoding.cleanarchitecturenoteapp.feature_note.presentation.notes.GetNote
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -43,7 +44,8 @@ object AppModule {
         return NoteUseCases(
             getAllNotes =  GetAllNotes(repository),
             deleteNote = DeleteNote(repository),
-            addNote = AddNote(repository)
+            addNote = AddNote(repository),
+            getNote = GetNote(repository)
         )
     }
 
